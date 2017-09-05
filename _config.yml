@@ -1,20 +1,16 @@
-title:            Balzac
+title:            MATT'S BL0G
 tagline:          A beautiful theme.
-description:      Describe your website.
-canonical: http://jekyll.gtat.me
+description:      A bl0g for sch00l.
 
 # Owner/author information
 owner:
-  name:           Cole Townsend
+  name:           Matt Collyer
   avatar:         avatar.png
-  bio:            "Aesthete & Athlete"
-  email:          cole@coletownsend.com
-  twitter:        twnsndco
-  github:         coletownsend
-  instagram:      ctrunsthis
-  dribbble:       coletownsend
+  bio:            "c00l guy"
+  email:          matthewcollyer@bennington.edu
+  github:         MattCollyer
   disqus:         balzac
-  location:       "Buffalo, NY"
+  location:       "Rhode Island"
   # Plug in your disqus shortname!
 
 tools:
@@ -33,9 +29,7 @@ links:
   - title: Github
     url: https://github.com/ColeTownsend/Balzac-for-Jekyll
     external: true
-  - title: Cole Who?
-    url: http://coletownsend.com
-    external: true
+
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
