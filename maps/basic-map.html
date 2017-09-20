@@ -1,0 +1,54 @@
+<!--  A basic web map. -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- This is for CSS -->
+    <style type="text/css">
+    body { margin:0;
+           padding:0;
+        }
+    html,
+    #map {
+                position: absolute;
+                top:0;
+                bottom: 0;
+                width:100%;
+              }
+    </style>
+
+
+    <title> Base Layer </title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+</head>
+
+<body>
+  <div id="map"></div>
+
+    <script>
+    // this is where we will write javascript code (script=javascript)
+    var map= L.map('map').setView([41.756706, -71.342912], 14);
+
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', { maxZoom: 16,attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	   subdomains: 'abcd',ext: 'png'}).addTo(map);
+     L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd',
+	maxZoom: 16,
+	ext: 'png'
+}).addTo(map);
+    var barringtonmarker =L.marker([41.756706, -71.342912]).addTo(map);
+    barringtonmarker.bindPopup('Hello, this is where I am from').openPopup();
+    var circle = L.circle([41.756706, -71.342912], {
+    color: 'green',
+    fillColor: '#2A9B87',
+    fillOpacity: 0.1,
+    radius: 2000
+}).addTo(map);
+    </script>
+
+</body>
+
+</html>
