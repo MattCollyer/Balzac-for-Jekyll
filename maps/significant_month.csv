@@ -1,0 +1,12 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2017-09-19T18:14:39.300Z,18.5838,-98.3993,51.01,7.1,mww,,23,1.045,1.09,us,us2000ar20,2017-09-20T15:19:21.431Z,"5km ENE of Raboso, Mexico",earthquake,8.1,5.6,0.05,39,reviewed,us,us
+2017-09-19T11:47:28.710Z,38.4238333,-87.9098333,11.68,3.8,mw,36,31,0.1008,0.18,nm,nm60207021,2017-09-20T14:31:55.070Z,"12km ENE of Albion, Illinois",earthquake,0.25,0.43,,62,reviewed,nm,nm
+2017-09-19T06:20:44.370Z,34.0866667,-118.4756667,10.48,3.61,ml,167,47,0.02591,0.25,ci,ci37766535,2017-09-20T15:22:18.628Z,"5km NW of Westwood, CA",earthquake,0.13,0.26,0.148,351,reviewed,ci,ci
+2017-09-15T01:17:47.780Z,37.414,-121.8056667,-0.21,3.29,ml,150,29,0.03653,0.18,nc,nc72892486,2017-09-20T14:32:22.960Z,"3km NNE of East Foothills, California",earthquake,0.1,0.42,0.139,63,reviewed,nc,nc
+2017-09-08T04:49:21.410Z,15.0678,-93.715,69.65,8.1,mww,,32,18.084,1.19,us,us2000ahv0,2017-09-20T15:06:06.939Z,"87km SW of Pijijiapan, Mexico",earthquake,9.5,4.2,0.068,21,reviewed,us,us
+2017-09-08T02:26:23.700Z,36.6996,-97.683,6.073,4.3,mwr,,49,,0.7,us,us2000ahub,2017-09-16T23:33:50.935Z,"12km SSE of Medford, Oklahoma",earthquake,1.4,5.9,0.036,75,reviewed,tul,us
+2017-09-03T03:30:01.940Z,41.3429,129.036,0,6.3,mb,,11,3.298,1.01,us,us2000aert,2017-09-06T07:12:21.653Z,"22km ENE of Sungjibaegam, North Korea",explosion,6.1,1.7,0.02,949,reviewed,us,us
+2017-09-02T23:56:52.690Z,42.6373,-111.4178,9.63,5.3,mww,,30,0.266,0.57,us,us2000aekg,2017-09-19T03:13:34.437Z,"15km E of Soda Springs, Idaho",earthquake,2.9,3.1,0.038,68,reviewed,us,us
+2017-08-31T17:06:55.750Z,-1.159,99.6881,43.14,6.3,mww,,20,2,1.13,us,us2000adjh,2017-09-12T21:05:04.409Z,"71km NE of Muara Siberut, Indonesia",earthquake,6.5,3.3,0.056,31,reviewed,us,us
+2017-08-27T04:17:51.010Z,-1.4513,148.0803,8,6.3,mww,,13,0.924,0.84,us,us2000ac7a,2017-09-20T04:08:49.812Z,"109km NE of Lorengau, Papua New Guinea",earthquake,6,1.7,0.061,26,reviewed,us,us
+2017-08-23T13:42:53.890Z,36.1858,44.9319,8,5.1,mww,,43,0.704,0.8,us,us2000aay1,2017-09-13T06:07:06.626Z,"29km ENE of Kuysinjaq, Iraq",earthquake,5.6,1.8,0.083,14,reviewed,us,us
