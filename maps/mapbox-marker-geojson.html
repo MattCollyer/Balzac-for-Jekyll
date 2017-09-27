@@ -21,32 +21,74 @@
     <script>
 
     L.mapbox.accessToken = 'pk.eyJ1IjoidGhlbGFzdGNvbG9yIiwiYSI6ImNqN3QyeXBpMjFqbGozMnFydHg3aTVnbXkifQ.A3N81ZD2FJMOOXgKP-peDw';
-    var map = L.map('map').setView([42.919, -73.2400], 4);
+    var map= L.map('map').setView([41.756706, -71.342912], 8);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        attribution:'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', { maxZoom: 16,attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+     subdomains: 'abcd',ext: 'png'}).addTo(map);
+     L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-hybrid/{z}/{x}/{y}.{ext}', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    subdomains: 'abcd',
+    maxZoom: 16,
+    ext: 'png'
     }).addTo(map);
 
+//I did not use omnivore to do this since the marker-symbol did not go through!!! >:(
 
-//     L.mapbox.featureLayer({
-//     type: 'Feature',
-//     geometry: {
-//         type: 'Point',
-//         // coordinates here are in longitude, latitude order because
-//         coordinates: [
-//           -77.03221142292,
-//           38.913371603574
-//         ]
-//     },
-//     properties: {
-//         title: 'Bennington College',
-//         'marker-size': 'large',
-//         'marker-color': '#000',
-//         'marker-symbol': 'cafe'
-//     }
-// }).addTo(map);
+    L.mapbox.featureLayer({
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#ff00b5",
+        "marker-size": "medium",
+        "marker-symbol": "star"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.34311199188232,
+          41.75674698839913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#049a00",
+        "marker-size": "medium",
+        "marker-symbol": "lodging"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.24021697044373,
+          42.918033225570824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -73.24020087718962,
+            42.91802929705388
+          ],
+          [
+            -71.34309858083725,
+            41.756742986656015
+          ]
+        ]
+      }
+    }
+  ]
+}).addTo(map);
 
-omnivore.csv('significant_month.csv').addTo(map);
+
+omnivore.csv('rhodeislandufo.csv').addTo(map);
 
     </script>
 </body>
