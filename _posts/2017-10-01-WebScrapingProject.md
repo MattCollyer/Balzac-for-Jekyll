@@ -10,7 +10,7 @@ Pretty neat stuff.
 from bs4 import BeautifulSoup
 import requests
 
-# Want to convert your Instagram photo into ASCII art?
+print(Want to convert your Instagram photo into ASCII art?)
 url = input('Enter your photo URL: ')
 
 result = requests.get(url)
