@@ -1,0 +1,92 @@
+<!-- An extended example for this: https://www.mapbox.com/help/show-changes-over-time/ -->
+
+<!-- We want people to be able to see where earthquakes have occurred, and what the relative magnitudes were  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato');
+    body {  margin: 0; padding: 0;  ; }
+    html,
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+  .map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin-left: 20px;
+    font-family: 'Lato', sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+  }
+  #features {
+    top: 0;
+    height: 100px;
+    margin-top: 20px;
+    width: 250px;
+  }
+ h2, p {
+    color: black;
+    margin: 10px;
+ }
+    </style>
+
+
+<title> Movements Map </title>
+ <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js'></script>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div id="map" class ="mapboxgl-map"></div>
+    <div class="map-overlay" id="features">
+    <h2> My Movements </h2>
+    <p> Hover for date :)</p>
+</div>
+
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbGFzdGNvbG9yIiwiYSI6ImNqN3QyeXBpMjFqbGozMnFydHg3aTVnbXkifQ.A3N81ZD2FJMOOXgKP-peDw';
+
+    var map = new mapboxgl.Map({
+        container: 'map', // you need this
+        style: 'mapbox://styles/mapbox/streets-v9', // you also need this
+        center: [-74.0006213, 40.7229971], // [long, lat] Different than leaflet, different than google maps, same as geojson!
+        zoom: 4,
+    });
+    // How to load general geojson
+    // Note that you always need to add source, then add layer. Source is where the data is coming from, layer is what you're going to do with it.
+    map.on('load', function() {
+
+        map.addSource("moves", {
+           type: "geojson",
+           data: 'places.geojson'
+          });
+        map.addLayer({
+            id: 'moves',
+            type: "circle",
+            source: "moves",
+            paint: {
+                "circle-color": "#00FF00"
+            }
+        })
+        });
+
+        var popup=new mapboxgl.Popup({
+          closeButton: false,
+          closeOnClick: false
+        })
+        //populate pop-up with information from our geojson file
+        //Add to map on hover for mouseenter with "magnitude"
+          map.on('mouseenter', 'moves', function(e){
+          map.getCanvas().style.cursor="pointer";// change cursor
+          popup.setLngLat(e.features[0].geometry.coordinates).setHTML("Date: "+(e.features[0].properties.date).substring(4,6)+"/"+(e.features[0].properties.date).substring(6,8)+"/"+(e.features[0].properties.date).substring(2,4)).addTo(map);
+        });
+    // now we have a new way of adding geojson data
+    // map.add Source('de')
+
+    </script>
+</body>
+
+</html>

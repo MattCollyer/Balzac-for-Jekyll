@@ -1,0 +1,357 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-19T18:14:39.300Z",
+        "depth": "51.01",
+        "mag": "7.1",
+        "magType": "mww",
+        "nst": "",
+        "gap": "23",
+        "dmin": "1.045",
+        "rms": "1.09",
+        "net": "us",
+        "id": "us2000ar20",
+        "updated": "2017-09-20T15:19:21.431Z",
+        "place": "5km ENE of Raboso, Mexico",
+        "type": "earthquake",
+        "horizontalError": "8.1",
+        "depthError": "5.6",
+        "magError": "0.05",
+        "magNst": "39",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -98.3993,
+          18.5838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-19T11:47:28.710Z",
+        "depth": "11.68",
+        "mag": "3.8",
+        "magType": "mw",
+        "nst": "36",
+        "gap": "31",
+        "dmin": "0.1008",
+        "rms": "0.18",
+        "net": "nm",
+        "id": "nm60207021",
+        "updated": "2017-09-20T14:31:55.070Z",
+        "place": "12km ENE of Albion, Illinois",
+        "type": "earthquake",
+        "horizontalError": "0.25",
+        "depthError": "0.43",
+        "magError": "",
+        "magNst": "62",
+        "status": "reviewed",
+        "locationSource": "nm",
+        "magSource": "nm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.9098333,
+          38.4238333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-19T06:20:44.370Z",
+        "depth": "10.48",
+        "mag": "3.61",
+        "magType": "ml",
+        "nst": "167",
+        "gap": "47",
+        "dmin": "0.02591",
+        "rms": "0.25",
+        "net": "ci",
+        "id": "ci37766535",
+        "updated": "2017-09-20T15:22:18.628Z",
+        "place": "5km NW of Westwood, CA",
+        "type": "earthquake",
+        "horizontalError": "0.13",
+        "depthError": "0.26",
+        "magError": "0.148",
+        "magNst": "351",
+        "status": "reviewed",
+        "locationSource": "ci",
+        "magSource": "ci"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.4756667,
+          34.0866667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-15T01:17:47.780Z",
+        "depth": "-0.21",
+        "mag": "3.29",
+        "magType": "ml",
+        "nst": "150",
+        "gap": "29",
+        "dmin": "0.03653",
+        "rms": "0.18",
+        "net": "nc",
+        "id": "nc72892486",
+        "updated": "2017-09-20T14:32:22.960Z",
+        "place": "3km NNE of East Foothills, California",
+        "type": "earthquake",
+        "horizontalError": "0.1",
+        "depthError": "0.42",
+        "magError": "0.139",
+        "magNst": "63",
+        "status": "reviewed",
+        "locationSource": "nc",
+        "magSource": "nc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.8056667,
+          37.414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-08T04:49:21.410Z",
+        "depth": "69.65",
+        "mag": "8.1",
+        "magType": "mww",
+        "nst": "",
+        "gap": "32",
+        "dmin": "18.084",
+        "rms": "1.19",
+        "net": "us",
+        "id": "us2000ahv0",
+        "updated": "2017-09-20T15:06:06.939Z",
+        "place": "87km SW of Pijijiapan, Mexico",
+        "type": "earthquake",
+        "horizontalError": "9.5",
+        "depthError": "4.2",
+        "magError": "0.068",
+        "magNst": "21",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -93.715,
+          15.0678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-08T02:26:23.700Z",
+        "depth": "6.073",
+        "mag": "4.3",
+        "magType": "mwr",
+        "nst": "",
+        "gap": "49",
+        "dmin": "",
+        "rms": "0.7",
+        "net": "us",
+        "id": "us2000ahub",
+        "updated": "2017-09-16T23:33:50.935Z",
+        "place": "12km SSE of Medford, Oklahoma",
+        "type": "earthquake",
+        "horizontalError": "1.4",
+        "depthError": "5.9",
+        "magError": "0.036",
+        "magNst": "75",
+        "status": "reviewed",
+        "locationSource": "tul",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.683,
+          36.6996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-03T03:30:01.940Z",
+        "depth": "0",
+        "mag": "6.3",
+        "magType": "mb",
+        "nst": "",
+        "gap": "11",
+        "dmin": "3.298",
+        "rms": "1.01",
+        "net": "us",
+        "id": "us2000aert",
+        "updated": "2017-09-06T07:12:21.653Z",
+        "place": "22km ENE of Sungjibaegam, North Korea",
+        "type": "explosion",
+        "horizontalError": "6.1",
+        "depthError": "1.7",
+        "magError": "0.02",
+        "magNst": "949",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.036,
+          41.3429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-09-02T23:56:52.690Z",
+        "depth": "9.63",
+        "mag": "5.3",
+        "magType": "mww",
+        "nst": "",
+        "gap": "30",
+        "dmin": "0.266",
+        "rms": "0.57",
+        "net": "us",
+        "id": "us2000aekg",
+        "updated": "2017-09-19T03:13:34.437Z",
+        "place": "15km E of Soda Springs, Idaho",
+        "type": "earthquake",
+        "horizontalError": "2.9",
+        "depthError": "3.1",
+        "magError": "0.038",
+        "magNst": "68",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -111.4178,
+          42.6373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-08-31T17:06:55.750Z",
+        "depth": "43.14",
+        "mag": "6.3",
+        "magType": "mww",
+        "nst": "",
+        "gap": "20",
+        "dmin": "2",
+        "rms": "1.13",
+        "net": "us",
+        "id": "us2000adjh",
+        "updated": "2017-09-12T21:05:04.409Z",
+        "place": "71km NE of Muara Siberut, Indonesia",
+        "type": "earthquake",
+        "horizontalError": "6.5",
+        "depthError": "3.3",
+        "magError": "0.056",
+        "magNst": "31",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          99.6881,
+          -1.159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-08-27T04:17:51.010Z",
+        "depth": "8",
+        "mag": "6.3",
+        "magType": "mww",
+        "nst": "",
+        "gap": "13",
+        "dmin": "0.924",
+        "rms": "0.84",
+        "net": "us",
+        "id": "us2000ac7a",
+        "updated": "2017-09-20T04:08:49.812Z",
+        "place": "109km NE of Lorengau, Papua New Guinea",
+        "type": "earthquake",
+        "horizontalError": "6",
+        "depthError": "1.7",
+        "magError": "0.061",
+        "magNst": "26",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.0803,
+          -1.4513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "time": "2017-08-23T13:42:53.890Z",
+        "depth": "8",
+        "mag": "5.1",
+        "magType": "mww",
+        "nst": "",
+        "gap": "43",
+        "dmin": "0.704",
+        "rms": "0.8",
+        "net": "us",
+        "id": "us2000aay1",
+        "updated": "2017-09-13T06:07:06.626Z",
+        "place": "29km ENE of Kuysinjaq, Iraq",
+        "type": "earthquake",
+        "horizontalError": "5.6",
+        "depthError": "1.8",
+        "magError": "0.083",
+        "magNst": "14",
+        "status": "reviewed",
+        "locationSource": "us",
+        "magSource": "us"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.9319,
+          36.1858
+        ]
+      }
+    }
+  ]
+}
