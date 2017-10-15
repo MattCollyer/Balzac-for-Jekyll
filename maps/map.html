@@ -1,0 +1,96 @@
+<!-- Documentation: https://www.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson -->
+
+<!-- States data url: https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces.geojson -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <style>
+    /*This is the CSS to make our map fill the whole screen*/
+    body { margin: 0; padding: 0; }
+    html,
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+
+
+    <title> Vector Map </title>
+ <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js'></script>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div id="map" class ="mapboxgl-map"></div>
+    <div class="map-overlay" id="features">
+    <h2> MAPPY </h2>
+    <div id ="content">
+        <p> Ta-da!</p>
+    </div>
+    </div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbGFzdGNvbG9yIiwiYSI6ImNqN3QyeXBpMjFqbGozMnFydHg3aTVnbXkifQ.A3N81ZD2FJMOOXgKP-peDw';
+    var map = new mapboxgl.Map({
+        container: 'map', // you need this
+        style: 'mapbox://styles/mapbox/light-v9', // you also need this
+        center: [-74.0006213, 40.7229971], // [long, lat] Different than leaflet, different than google maps, same as geojson!
+        zoom: 4,
+    });
+    // How to load general geojson
+    // Note that you always need to add source, then add layer. Source is where the data is coming from, layer is what you're going to do with it.
+    map.on('load', function() {
+//GET https://api.darksky.net/forecast/58fb5fc4abf5d919f26cb526fca733d2/37.8267,-122.4233
+        map.addSource("countys", { type: "geojson", data: './combined_json.geojson' });
+
+        map.addLayer({
+            id: 'county',
+            type: "fill",
+            source: "countys",
+            paint: {
+                "fill-color":{
+                  property: 'happening',
+                  stops:[
+                    [48.00, "#0000ff"],
+                    [90.00, "#ff0000"]
+                    ]
+            }
+        }})
+        });
+
+
+          darksky="https://api.darksky.net/forecast/58fb5fc4abf5d919f26cb526fca733d2/";
+          excludes="?exclude=[minutely,hourly,daily,alerts,flags]";
+          // latitude= properties.latty;
+          // longitude= properties.longy;
+          url=darksky+"42.871243,-73.180181"+excludes;
+          var weather = new XMLHttpRequest();
+          weather.open("GET", url, false);
+          weather.send(null);
+
+          var r = JSON.parse(weather.response);
+
+          console.log(r)
+
+          //
+          // return properties.happening <30 ? "#4c6aff":
+          //        properties.happening <45 ? "#5292ff":
+          //        properties.happening <60 ? "#91bfff":
+          //        properties.happening <75 ? "#ffa700":
+          //        properties.happening <90 ? "#ff8100":
+          //                                            "#000000";
+                                                    //  weather.currently.temperature <30 ? "#4c6aff":
+                                                    //         weather.currently.temperature <45 ? "#5292ff":
+                                                    //         weather.currently.temperature <60 ? "#91bfff":
+                                                    //         weather.currently.temperature <75 ? "#ffa700":
+                                                    //         weather.currently.temperature <90 ? "#ff8100":
+                                                    //                                             "#000000";}
+
+
+
+    // now we have a new way of adding geojson data
+    // map.add Source('de')
+
+    </script>
+</body>
+
+</html>
