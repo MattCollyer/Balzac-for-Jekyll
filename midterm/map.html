@@ -1,0 +1,78 @@
+<!-- Documentation: https://www.mapbox.com/mapbox-gl-js/style-spec/#sources-geojson -->
+
+<!-- States data url: https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_admin_1_states_provinces.geojson -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+     <style>
+    /*This is the CSS to make our map fill the whole screen*/
+    body { margin: 0; padding: 0; }
+    html,
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+
+
+    <title> Vector Map </title>
+ <script src='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.js'></script>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v0.40.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+
+<body>
+    <div id="map" class ="mapboxgl-map"></div>
+    <div class="map-overlay" id="features">
+    <h2> Climate Change</h2>
+    <div id ="content">
+        <p> % of people who believe climate change is happening</p>
+    </div>
+    </div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbGFzdGNvbG9yIiwiYSI6ImNqN3QyeXBpMjFqbGozMnFydHg3aTVnbXkifQ.A3N81ZD2FJMOOXgKP-peDw';
+    var map = new mapboxgl.Map({
+        container: 'map', // you need this
+        style: 'mapbox://styles/mapbox/dark-v9', // you also need this
+        center: [-74.0006213, 40.7229971], // [long, lat] Different than leaflet, different than google maps, same as geojson!
+        zoom: 4,
+    });
+    // How to load general geojson
+    // Note that you always need to add source, then add layer. Source is where the data is coming from, layer is what you're going to do with it.
+    map.on('load', function() {
+//GET https://api.darksky.net/forecast/58fb5fc4abf5d919f26cb526fca733d2/37.8267,-122.4233
+        map.addSource("counties", { type: "geojson", data: './combined_json.geojson' });
+
+        map.addLayer({
+            id: 'county',
+            type: "fill",
+            source: "counties",
+            paint: {
+                "fill-color":{
+                  property: 'human',
+                  stops:[
+                    [30.00, "#0000ff"],
+                    [70.00, "#ff9a00"]
+                    ]
+            }
+        }})
+      })
+
+        var popup=new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: true
+          })
+
+          map.on('mouseenter', 'counties', function(e){
+            map.getCanvas().style.cursor="pointer";// change cursor
+            popup.setLngLat(e.features[0].geometry.coordinates).setHTML(e.features[0].properties.happening+"%").addTo(map);
+          });
+
+          //centers map on point click
+
+    // now we have a new way of adding geojson data
+    // map.add Source('de')
+
+    </script>
+</body>
+
+</html>
