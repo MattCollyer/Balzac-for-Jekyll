@@ -13,6 +13,32 @@
   </head>
 <body>
 <style>
+.map-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    margin-left: 20px;
+    font-family: 'Lato', sans-serif;
+    overflow: auto;
+    border-radius: 3px;
+  }
+  #features {
+    top: 0;
+    height: 100px;
+    margin-top: 20px;
+    width: 250px;
+  }
+ h2{
+    color: black;
+    margin: 10px;
+    font-size: 18px;
+ }
+ p {
+    color: black;
+    margin: 10px;
+    font-size: 10px;
+ }
 .info {
     background: rgba(0,0,0,0.5);
     color: #fff;
@@ -26,9 +52,6 @@
     border-radius: 3px;
     display: none;
 }
-</style>
-
-/*<style>
     #menu {
         background: #fff;
         position: absolute;
@@ -79,10 +102,15 @@
 
     <div id="map" class ="mapboxgl-map"></div>
     <pre id='info' class='info'></pre>
-    <div class="map-overlay" id="features"></div>
+      <div class="map-overlay" id="features">
+      <h2>Temperature</h2>
+      <p>The temperature of each county</p>
+      <p>Click "Happening" to see the current temperature altered by how many people believe climate change is not happening.<br/> </p>
+      <p>Click "Human" to see the current temperature altered by how many people believe climate change is not caused by human activity.</p>
+  </div>
+
 
     <script>
-    console.log("I LOVE YOU NAOMI")
     mapboxgl.accessToken = 'pk.eyJ1IjoidGhlbGFzdGNvbG9yIiwiYSI6ImNqN3QyeXBpMjFqbGozMnFydHg3aTVnbXkifQ.A3N81ZD2FJMOOXgKP-peDw';
     var map = new mapboxgl.Map({
         container: 'map',
@@ -105,12 +133,17 @@
                 "fill-color":{
                   property: 'temperature',
                   stops:[
-                    [0.00, "#0000ff"],
-                    [70.00, "#ff9a00"]
-                    ]
-
+                    [0.00, "#4575b4"],
+                    [12.50,"#74add1"],
+                    [25.00,"#abd9e9"],
+                    [37.50,"#e0f3f8"],
+                    [50.00,"#ffffff"],
+                    [62.50,"#f7d08d"],
+                    [75.00,"#e9b852"],
+                    [87.50,"#f46d43"],
+                    [100.00,"#d73027"] ]
       },
-                "fill-opacity": 0.8}});
+                "fill-opacity": 1}});
 
 
       map.addLayer({
@@ -124,11 +157,17 @@
              "fill-color": {
                property: 'temp_human_adjust',
                stops:[
-                 [0.00, "#0000ff"],
-                 [70.00, "#ff9a00"]
-                 ]
+                 [0.00, "#4575b4"],
+                 [12.50,"#74add1"],
+                 [25.00,"#abd9e9"],
+                 [37.50,"#e0f3f8"],
+                 [50.00,"#ffffff"],
+                 [62.50,"#f7d08d"],
+                 [75.00,"#e9b852"],
+                 [87.50,"#f46d43"],
+                 [100.00,"#d73027"] ]
          },
-         "fill-opacity":0.8
+         "fill-opacity":1
              }
      });
 
@@ -143,11 +182,17 @@
             "fill-color": {
               property: 'temp_happening_adjust',
               stops:[
-                [0.00, "#0000ff"],
-                [70.00, "#ff9a00"]
-                ]
+                [0.00, "#4575b4"],
+                [12.50,"#74add1"],
+                [25.00,"#abd9e9"],
+                [37.50,"#e0f3f8"],
+                [50.00,"#ffffff"],
+                [62.50,"#f7d08d"],
+                [75.00,"#e9b852"],
+                [87.50,"#f46d43"],
+                [100.00,"#d73027"] ]
         },
-        "fill-opacity":0.8
+        "fill-opacity":1
             }
     });
 
@@ -179,7 +224,7 @@
     happening.href = '#';
     human.className = '';
     happening.className = '';
-    human.textContent = 'Human';
+    human.textContent = 'Human Activity';
     happening.textContent = 'Happening';
     human.onclick = function (e) {
         e.preventDefault();
@@ -218,8 +263,8 @@
         }
     };
     var layers = document.getElementById('menu');
-    layers.appendChild(human);
     layers.appendChild(happening);
+    layers.appendChild(human);
 
     </script>
 </body>
