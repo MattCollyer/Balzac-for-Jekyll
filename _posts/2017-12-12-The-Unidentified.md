@@ -6,7 +6,7 @@ The dataset is free to the public [here](https://github.com/googlecreativelab/qu
 
 Each document contains this data:
 <p align="center">
- <img src="https://github.com/MattCollyer/MattCollyer.github.io/blob/master/_posts/Images/data.png" alt="data">
+ <img src="https://raw.githubusercontent.com/MattCollyer/MattCollyer.github.io/master/_posts/Images/data.png" alt="data">
 </p>
 
 Thankfully, Google was quite nice and created a simplified version of the data. In the README they describe the differences, “We've simplified the vectors, removed the timing information, and positioned and scaled the data into a 256x256 region.” 
@@ -20,7 +20,7 @@ Okay here’s the thing. I think SQL’s are much more efficient and better over
 
 But here came another issue. Here’s what the download actually looked like: 
 <p align="center">
- <img src="images/downloaded.png" alt="data">
+ <img src="https://raw.githubusercontent.com/MattCollyer/MattCollyer.github.io/master/_posts/Images/downloaded.png" alt="downloaded_data">
 </p>
 
 Oh man oh my oh me! I can’t possibly import all 345 files one by one! 
@@ -52,8 +52,8 @@ And often you can find some truly amazing answers.
 And some humorous ones too :)
 
 <p align="center">
- <img src="images/octagon.png" alt="data">
+ <img src="https://raw.githubusercontent.com/MattCollyer/MattCollyer.github.io/master/_posts/Images/octagon.png" alt="octagon?">
 </p>
 <p align="center">
- <img src="MatttCollyer.github.io/images/envelope.png" alt="data">
+ <img src="https://raw.githubusercontent.com/MattCollyer/MattCollyer.github.io/master/_posts/Images/envelope.png" alt="envelope?">
 </p>
