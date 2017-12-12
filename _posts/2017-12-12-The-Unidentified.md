@@ -1,7 +1,9 @@
 For this assignment, I wanted to use the google quick draw dataset. I had a small idea, one that I was not passionate about, but I figured it met the requirements and would be at least a fun result if it worked.
-In case you’re not familiar with [Google quick draw](https://quickdraw.withgoogle.com/)
+In case you’re not familiar with Google Quick Draw, heres a [link](https://quickdraw.withgoogle.com/).
 
-The dataset is free to the public [here](https://github.com/googlecreativelab/quickdraw-dataset)
+I desired to create a sort of "game" with the data. I thought it would be interesting to have the user try to guess the drawings which the neural network was unable to guess correctly.
+
+The dataset is free to the public [here](https://github.com/googlecreativelab/quickdraw-dataset).
 
 
 Each document contains this data:
@@ -14,7 +16,7 @@ The dataset is HUGE, around 22 gigabytes containing over 50 million doodles, whi
 But here I was left with a dilemma.
 
 Oh man oh my oh me!! What type of database management system should I use! So many options! Should I stay true to a SQL system? Or, be edgy and go with something like… MongoDB? 
-Okay here’s the thing. I think SQL’s are much more efficient and better overall, and possibly could have made my life easier. However, because I just finished working with mongo and it was still super fresh in my mind, and because I’m extremely familiar with the Java(script) syntax, I decided to go with Mongo. I then had to face the facts I would have to move it onto my computer to use mongo. So with a tear in my eye I moved my entire itunes library onto the external drive. This made plenty of room, all that was left was to import the files into mongo. The terminal command is simply: 
+Okay here’s the thing. I think SQL’s are much more efficient and better overall, and possibly could have made my life easier. However, because I just finished working with mongo and it was still super fresh in my mind, and because I’m extremely familiar with the Java(script) syntax, I decided to go with Mongo. With my DBMS figured out, I then had to face the facts. I would have to move it onto my computer to use mongo. So with a tear in my eye I moved my entire itunes library onto the external drive. This made plenty of room, all that was left was to import the files into mongo. The terminal command is simply: 
 
 `mongoimport -d <database name>  -c <collection> --file <file.json>`
 
