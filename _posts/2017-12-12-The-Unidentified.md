@@ -3,9 +3,10 @@ In case you’re not familiar with [Google quick draw](https://quickdraw.withgoo
 
 The dataset is free to the public [here](https://github.com/googlecreativelab/quickdraw-dataset)
 
+
 Each document contains this data:
 <p align="center">
- <img src="images/data.png" alt="data">
+ <img src="https://github.com/MattCollyer/MattCollyer.github.io/blob/master/_posts/Images/data.png" alt="data">
 </p>
 
 Thankfully, Google was quite nice and created a simplified version of the data. In the README they describe the differences, “We've simplified the vectors, removed the timing information, and positioned and scaled the data into a 256x256 region.” 
@@ -54,5 +55,5 @@ And some humorous ones too :)
  <img src="images/octagon.png" alt="data">
 </p>
 <p align="center">
- <img src="images/envelope.png" alt="data">
+ <img src="MatttCollyer.github.io/images/envelope.png" alt="data">
 </p>
