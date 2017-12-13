@@ -1,0 +1,62 @@
+$def with (doodle,correct)
+<html>
+$ head1="Correct!"
+$ head3="It still benefits to be human"
+$if(correct==False):
+  $ head1="Incorrect!"
+  $ head3="Sorry, but you're no better than the neural network!"
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<center> <head><title>The Unidentified</title></head>
+<h1>$head1</h1>
+<h2>The word was: $doodle['word']</h2>
+<h3>$head3</h3>
+<form action="/doodle" method="POST">
+<input type="submit" name="submit" value="Again?">
+<div id="doodle"></div>
+  <p> </p>
+<script>
+var data= $doodle['drawing']
+
+var svg = d3.select('#doodle')
+            .append('svg')
+            .attr('height', '256px')
+            .attr('width', '256px');
+
+data.forEach(function(e){
+  var dataArray=[];
+  var i=0;
+  while (i<e[0].length) {
+    thing={"x":e[0][i],"y":e[1][i]}
+    dataArray.push(thing)
+    i++;
+
+  }
+  console.log(dataArray);
+
+  var line =  d3.line()
+        .x(function(d) { return d.x; })
+        .y(function(d) { return d.y; })
+        .curve(d3.curveBasis);
+  svg.append('path')
+        .attr('fill','none')
+        .attr('stroke','black')
+        .attr('stroke-width','2')
+        .attr('d',line(dataArray));
+
+});
+</script>
+$if ('human_guesses' in doodle):
+  $if (len(doodle['human_guesses'])==1):
+    <h4> Someone else guessed: doodle['human_guesses'][0]</h4>
+  $else:
+    <h4>Other people guessed: </h4>
+    $for guess in doodle['human_guesses']:
+      <li><p>guess</p></li>
+
+
+<h4>This drawing is from: $doodle['country']</h4>
+</center>
+<body>
+</body>
+</html>

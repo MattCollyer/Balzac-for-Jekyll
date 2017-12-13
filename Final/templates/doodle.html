@@ -1,0 +1,44 @@
+$def with (doodle)
+<html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<head><title>The Unidentified</title></head>
+<body>
+<center>
+  <form method="POST" action="/doodle/$doodle['key_id']">
+      What am I?: <input name="guess" type="text">
+      <input type="submit" value="Check Answer">
+      <p> </p>
+<div id="doodle"></div>
+<script>
+var data= $doodle['drawing']
+var svg = d3.select('#doodle')
+            .append('svg')
+            .attr('height', '256px')
+            .attr('width', '256px');
+data.forEach(function(e){
+  var dataArray=[];
+  var i=0;
+  while (i<e[0].length) {
+    thing={"x":e[0][i],"y":e[1][i]}
+    dataArray.push(thing)
+    i++;
+
+  }
+  console.log(dataArray);
+
+  var line =  d3.line()
+        .x(function(d) { return d.x; })
+        .y(function(d) { return d.y; })
+        .curve(d3.curveBasis);
+  svg.append('path')
+        .attr('fill','none')
+        .attr('stroke','black')
+        .attr('stroke-width','2')
+        .attr('d',line(dataArray));
+
+});
+</script>
+</center>
+</body>
+</html>
