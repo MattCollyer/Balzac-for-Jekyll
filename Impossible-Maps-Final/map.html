@@ -204,12 +204,12 @@
      });
      map.on("mousemove", "Happening", function(e) {
          info.style.display = 'block';
-         info.innerHTML = 'County: '+e.features[0].properties.NAME+'<br />Temperature: ' + e.features[0].properties.temperature+'<br />Adjusted Temperature: '+ e.features[0].properties.temp_happening_adjust.toFixed(2)+'<br />Percent that believe climate change is happening: '+e.features[0].properties.happening+'%';
+         info.innerHTML = 'County: '+e.features[0].properties.NAME+'<br />Temperature: ' + e.features[0].properties.temperature+'<br />Adjusted Temperature: '+ e.features[0].properties.temp_happening_adjust.toFixed(2)+'<br />Percent that believes climate change is happening: '+e.features[0].properties.happening+'%';
          canvas.style.cursor = '';
      });
      map.on("mousemove", "Human", function(e) {
          info.style.display = 'block';
-         info.innerHTML = 'County: '+e.features[0].properties.NAME+'<br />Temperature: ' + e.features[0].properties.temperature+'<br />Adjusted Temperature: ' + e.features[0].properties.temp_human_adjust.toFixed(2)+'<br />Percent that believe climate changed is caused by human activity: '+e.features[0].properties.human+'%';
+         info.innerHTML = 'County: '+e.features[0].properties.NAME+'<br />Temperature: ' + e.features[0].properties.temperature+'<br />Adjusted Temperature: ' + e.features[0].properties.temp_human_adjust.toFixed(2)+'<br />Percent that believes climate changed is caused by human activity: '+e.features[0].properties.human+'%';
          canvas.style.cursor = '';
      });
 
