@@ -1,7 +1,9 @@
 For this assignment, I wanted to use the google quick draw dataset. I had a small idea, one that I was not passionate about, but I figured it met the requirements and would be at least a fun result if it worked.
-In case you’re not familiar with Google Quick Draw, heres a [link](https://quickdraw.withgoogle.com/).
+In case you’re not familiar with Google Quick Draw, here's a [link](https://quickdraw.withgoogle.com/).
 
 I desired to create a sort of "game" with the data. I thought it would be interesting to have the user try to guess the drawings which the neural network was unable to guess correctly.
+
+My code is [here](https://github.com/MattCollyer/MattCollyer.github.io/tree/master/Final).
 
 The dataset is free to the public [here](https://github.com/googlecreativelab/quickdraw-dataset).
 
